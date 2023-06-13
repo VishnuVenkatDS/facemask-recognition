@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.png" />
+  
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="../static/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="../static/plugins/slick/slick.css">
+  <link rel="stylesheet" href="../static/plugins/slick/slick-theme.css">
+  <link rel="stylesheet" href="../static/plugins/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../static/plugins/aos/aos.css">
+
+  <!-- CUSTOM CSS -->
+  <link href="../static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<p align="center">
+
+						{% if mcnt1>=2 %}
+						
+							{% if st=="1" %}
+						<img src="../static/images/door.gif" class="img-fluid" width="300" height="300">
+						<h3 style="color:#006633" align="center">{{msg}}</h3>
+						<h4 align="center">{{det}}</h4>
+						
+						<iframe src="http://localhost/voice/voice_read.php?mess={{det}}" width="100" height="100" frameborder="0"></iframe>
+							{% endif %}
+						{% else %}
+						<img class="img-fluid" src="../static/images/fc6.png"
+							alt="desk-image">
+						{% endif %}
+						
+						
+						{% if msg=="Unknown" %}
+						
+						<iframe src="http://iotcloud.co.in/testmail/testmail1.php?message={{mess}}&email={{email}}&subject=Person Detected" width="10" height="10" frameborder="1"></iframe>
+						{% endif %}
+
+</p>
+<script>
+						setTimeout(function () {
+						   //Redirect with JavaScript
+						  window.location.href="/process";
+						}, 6000);
+						</script>
+						
+						
+						
+ <script src="../static/plugins/jquery/jquery.min.js"></script>
+  <script src="../static/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="../static/plugins/slick/slick.min.js"></script>
+  <script src="../static/plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="../static/plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="../static/plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="../static/plugins/google-map/gmap.js"></script>
+  
+  <script src="../static/js/script.js"></script>
+</body>
+</html>
